@@ -33,6 +33,7 @@
 	},
 	"scripts": {
 		"dev": "pnpm start",
+		"dev:db": "json-server --watch --port=3080 db.json",
 		"start": "craco start",
 		"build": "craco build",
 		"test": "craco test",
@@ -66,6 +67,7 @@
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"husky": "^8.0.3",
+		"json-server": "^0.17.4",
 		"lint-staged": "^15.1.0",
 		"prettier": "^3.1.0",
 		"sass": "^1.69.5",
