@@ -17,6 +17,7 @@
     "prettier",
     "eslint:recommended",
     "plugin:react/recommended",
+		"plugin:import/recommended",
     "plugin:prettier/recommended",
 		"plugin:react-hooks/recommended"
 	],
@@ -26,13 +27,17 @@
     "jsx-a11y",
     "@typescript-eslint"
 	],
-	"ignorePatterns": [
-		"dist", 
-		".eslintrc"
-	],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	},
 	"rules": {
-    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+		"@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+		"react/react-in-jsx-scope": "off"
 	}
 }

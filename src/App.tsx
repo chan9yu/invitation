@@ -1,3 +1,9 @@
+import Test from './components/Test';
+
 export default function App() {
-	return <div>App</div>;
+	return (
+		<div>
+			<Test />
+		</div>
+	);
 }
