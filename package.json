@@ -47,7 +47,8 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.12.0",
-		"react-scripts": "5.0.1"
+		"react-scripts": "5.0.1",
+		"swiper": "^9"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.3",

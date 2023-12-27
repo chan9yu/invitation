@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 
 import FullScreenMessage from './components/common/FullScreenMessage';
 import Heading from './components/sections/Heading';
-import Video from './components/sections/backup';
+import ImageGallery from './components/sections/ImageGallery';
+import Video from './components/sections/Video';
 import type { Wedding } from './models/wedding';
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
 		<div>
 			<Heading date={wedding.date} />
 			<Video />
+			<ImageGallery images={wedding.galleryImages} />
 		</div>
 	);
 }

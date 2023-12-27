@@ -7,8 +7,14 @@ const cx = classNames.bind(styles);
 
 type SectionProps = PropsWithChildren & {
 	className?: string;
+	title?: string;
 };
 
-export default function Section({ children, className }: SectionProps) {
-	return <div className={cx(['container', className])}>{children}</div>;
+export default function Section({ children, className, title }: SectionProps) {
+	return (
+		<div className={cx(['container', className])}>
+			{title && <div className={cx('title')}>{title}</div>}
+			{children}
+		</div>
+	);
 }
