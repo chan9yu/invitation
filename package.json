@@ -32,9 +32,8 @@
 		]
 	},
 	"scripts": {
-		"dev": "pnpm start",
+		"dev": "craco start",
 		"dev:db": "json-server --watch --port=3080 db.json",
-		"start": "craco start",
 		"build": "craco build",
 		"test": "craco test",
 		"eject": "react-scripts eject",
@@ -44,8 +43,10 @@
 	},
 	"dependencies": {
 		"classnames": "^2.4.0",
+		"date-fns": "^3.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-icons": "^4.12.0",
 		"react-scripts": "5.0.1"
 	},
 	"devDependencies": {
