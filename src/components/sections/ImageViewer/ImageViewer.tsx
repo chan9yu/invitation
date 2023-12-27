@@ -1,8 +1,8 @@
 import classNames from 'classnames/bind';
 
-import CustomSwiper from '../../CustomSwiper';
-import styles from './ImageViewer.module.scss';
+import CustomSwiper from '../../common/CustomSwiper';
 import CloseIcon from '../../icons/CloseIcon';
+import styles from './ImageViewer.module.scss';
 
 const cx = classNames.bind(styles);
 
