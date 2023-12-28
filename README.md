@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Wedding Invitation App
 
-## Available Scripts
+> 💌 wedding invitation app with react
 
-In the project directory, you can run:
+## 🔗 Link
 
-### `npm start`
+- <a href="https://chan9yu.github.io/wedding-invitation_app" target="_blank" rel="noreferrer">APP DEMO</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="right">
+  <a href="#readme-top">맨 위로</a>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🔧 Tech Stack
 
-### `npm test`
+- <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+- <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+- <img src="https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
+- <img src="https://img.shields.io/badge/datefns-770C56?style=for-the-badge&logo=datefns&logoColor=white">
+- <img src="https://img.shields.io/badge/swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white">
+- <img src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white">
+- <img src="https://img.shields.io/badge/githubpages-222222?style=for-the-badge&logo=githubpages&logoColor=white">
+- <img src="https://img.shields.io/badge/githubactions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="right">
+  <a href="#readme-top">맨 위로</a>
+</p>
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+로컬환경에서 앱을 실행하는 방법입니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+해당 앱을 실행시키기 위한 필수 조건 입니다.
 
-### `npm run eject`
+1. pnpm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+# pnpm 설치
+npm -g install pnpm
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. node setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+# .nvmrc 기준 node version 설치
+nvm use
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Installation
 
-## Learn More
+1. 프로젝트 클론
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```shell
+git clone https://github.com/chan9yu/wedding-invitation_app
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. 프로젝트 디렉토리로 이동
+
+```shell
+cd wedding-invitation_app
+```
+
+3. 종속성 설치
+
+```shell
+pnpm install
+```
+
+4. 개발 서버 시작
+
+```
+pnpm dev
+```
+
+<p align="right">
+  <a href="#readme-top">맨 위로</a>
+</p>
