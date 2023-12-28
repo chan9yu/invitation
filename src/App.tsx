@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import FullScreenMessage from './components/common/FullScreenMessage';
 import Heading from './components/sections/Heading';
 import ImageGallery from './components/sections/ImageGallery';
+import Intro from './components/sections/Intro';
+import Invitation from './components/sections/Invitation';
 import Video from './components/sections/Video';
 import type { Wedding } from './models/wedding';
 
@@ -46,6 +48,14 @@ export default function App() {
 		<div>
 			<Heading date={wedding.date} />
 			<Video />
+			<Intro
+				brideName={wedding.bride.name}
+				groomName={wedding.groom.name}
+				locationName={wedding.location.name}
+				weddingDate={wedding.date}
+				introMessage={wedding.message.intro}
+			/>
+			<Invitation invitationMessage={wedding.message.invitation} />
 			<ImageGallery images={wedding.galleryImages} />
 		</div>
 	);

@@ -1,0 +1,16 @@
+.container {
+	text-align: center;
+	line-height: 26px;
+}
+
+.text {
+	white-space: pre-line;
+}
+
+.icon {
+	&--letter {
+		width: 20px;
+		height: 20px;
+		margin: 72px 0 8px;
+	}
+}

@@ -1,0 +1,44 @@
+.container {
+	text-align: center;
+	line-height: 26px;
+}
+
+.wrapper {
+	&--persons {
+		font-size: 22px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 1.4px;
+		font-weight: bold;
+		margin: 42px 0 8px;
+	}
+
+	&--location {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 40px;
+	}
+}
+
+.icon {
+	&--heart {
+		fill: var(--red);
+		width: 16px;
+		height: 16px;
+		margin: 0 6px;
+	}
+}
+
+.text {
+	white-space: pre-line;
+}
+
+.icon {
+	&--flower {
+		width: 24px;
+		height: 24px;
+		margin-bottom: 6px;
+		fill: var(--red);
+	}
+}
