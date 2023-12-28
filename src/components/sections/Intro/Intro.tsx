@@ -11,14 +11,15 @@ const cx = classNames.bind(styles);
 
 type IntroProps = {
 	brideName: string;
+	date: string;
 	groomName: string;
-	introMessage: string;
 	locationName: string;
-	weddingDate: string;
+	message: string;
 };
 
-export default function Intro({ brideName, groomName, introMessage, locationName, weddingDate }: IntroProps) {
-	const formattedWeddingDate = format(parseISO(weddingDate), 'yyyy년 M월 d일 eeee', { locale: ko });
+export default function Intro({ brideName, date, groomName, locationName, message }: IntroProps) {
+	const parsedDate = parseISO(date);
+	const weddingDate = format(parsedDate, 'yyyy년 M월 d일 eeee', { locale: ko });
 
 	return (
 		<Section className={cx('container')}>
@@ -28,11 +29,11 @@ export default function Intro({ brideName, groomName, introMessage, locationName
 				<span>{brideName}</span>
 			</div>
 			<div className={cx('wrapper--location')}>
-				<span>{formattedWeddingDate}</span>
+				<span>{weddingDate}</span>
 				<span>{locationName}</span>
 			</div>
 			<FlowerIcon className={cx('icon--flower')} />
-			<div className={cx('text')}>{introMessage}</div>
+			<div className={cx('text')}>{message}</div>
 		</Section>
 	);
 }

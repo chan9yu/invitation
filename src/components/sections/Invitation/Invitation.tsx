@@ -7,14 +7,14 @@ import styles from './Invitation.module.scss';
 const cx = classNames.bind(styles);
 
 type InvitationProps = {
-	invitationMessage: string;
+	message: string;
 };
 
-export default function Invitation({ invitationMessage }: InvitationProps) {
+export default function Invitation({ message }: InvitationProps) {
 	return (
 		<Section className={cx('container')}>
 			<LetterIcon className={cx('icon--letter')} />
-			<p className={cx('text')}>{invitationMessage}</p>
+			<p className={cx('text')}>{message}</p>
 		</Section>
 	);
 }

@@ -1,0 +1,22 @@
+@import url('~react-day-picker/dist/style.css');
+
+.rdp-caption {
+	display: none;
+}
+
+.rdp-cell {
+	cursor: default;
+}
+
+.rdp-head_cell {
+	font-weight: 500;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.rdp-day_selected,
+.rdp-day_selected:hover {
+	background-color: var(--red);
+	font-weight: bold;
+	color: #fff;
+}

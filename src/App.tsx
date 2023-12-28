@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import FullScreenMessage from './components/common/FullScreenMessage';
+import Calender from './components/sections/Calender';
 import Heading from './components/sections/Heading';
 import ImageGallery from './components/sections/ImageGallery';
 import Intro from './components/sections/Intro';
@@ -44,19 +45,22 @@ export default function App() {
 		return null;
 	}
 
+	const { bride, date, galleryImages, groom, location, message } = wedding;
+
 	return (
 		<div>
-			<Heading date={wedding.date} />
+			<Heading date={date} />
 			<Video />
 			<Intro
-				brideName={wedding.bride.name}
-				groomName={wedding.groom.name}
-				locationName={wedding.location.name}
-				weddingDate={wedding.date}
-				introMessage={wedding.message.intro}
+				brideName={bride.name}
+				date={date}
+				groomName={groom.name}
+				locationName={location.name}
+				message={message.intro}
 			/>
-			<Invitation invitationMessage={wedding.message.invitation} />
-			<ImageGallery images={wedding.galleryImages} />
+			<Invitation message={message.invitation} />
+			<ImageGallery images={galleryImages} />
+			<Calender date={date} />
 		</div>
 	);
 }
