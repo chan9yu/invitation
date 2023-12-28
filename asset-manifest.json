@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.56d9f0fc.css",
-    "main.js": "/static/js/main.d68a7be4.js",
+    "main.js": "/static/js/main.c2c1c3c8.js",
     "static/media/NanumGeumEunBoHwa.ttf": "/static/media/NanumGeumEunBoHwa.c0218d741bd238e567f8.ttf",
     "static/media/NanumGeumEunBoHwa.woff": "/static/media/NanumGeumEunBoHwa.ebc72913fb5ddc4122ca.woff",
     "static/media/NanumGeumEunBoHwa.woff2": "/static/media/NanumGeumEunBoHwa.604adb60828562a2cb14.woff2",
     "index.html": "/index.html",
     "main.56d9f0fc.css.map": "/static/css/main.56d9f0fc.css.map",
-    "main.d68a7be4.js.map": "/static/js/main.d68a7be4.js.map"
+    "main.c2c1c3c8.js.map": "/static/js/main.c2c1c3c8.js.map"
   },
   "entrypoints": [
     "static/css/main.56d9f0fc.css",
-    "static/js/main.d68a7be4.js"
+    "static/js/main.c2c1c3c8.js"
   ]
 }
