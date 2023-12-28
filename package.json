@@ -4,6 +4,7 @@
 	"version": "0.1.0",
 	"description": "✉️ wedding invitation app",
 	"author": "chan9yu <wry5533@gmail.com>",
+	"homepage": "https://chan9yu.github.io/wedding-invitation_app",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/chan9yu/wedding-invitation_app"
@@ -33,7 +34,6 @@
 	},
 	"scripts": {
 		"dev": "craco start",
-		"dev:db": "json-server --watch --port=3080 db.json",
 		"build": "craco build",
 		"test": "craco test",
 		"eject": "react-scripts eject",
@@ -75,7 +75,6 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"gh-pages": "^6.1.1",
 		"husky": "^8.0.3",
-		"json-server": "^0.17.4",
 		"kakao.maps.d.ts": "^0.1.39",
 		"lint-staged": "^15.1.0",
 		"prettier": "^3.1.0",

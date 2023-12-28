@@ -11,6 +11,9 @@ import Map from './components/sections/Map';
 import Video from './components/sections/Video';
 import type { Wedding } from './models/wedding';
 
+const isDev = process.env.NODE_ENV === 'development';
+const baseUrl = isDev ? 'http://localhost:3050' : 'https://chan9yu.github.io';
+
 export default function App() {
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(false);
@@ -18,13 +21,8 @@ export default function App() {
 
 	useEffect(() => {
 		setLoading(true);
-		fetch('http://localhost:3080/wedding')
-			.then(res => {
-				if (!res.ok) {
-					throw new Error('청접장 정보를 불러오지 못했습니다.');
-				}
-				return res.json();
-			})
+		fetch(`${baseUrl}/wedding-invitation_app/data/wedding.json`)
+			.then(res => res.json())
 			.then(res => setWedding(res))
 			.catch(() => setError(true))
 			.finally(() => setLoading(false));

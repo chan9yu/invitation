@@ -19,13 +19,20 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
+
       - name: Use Node.js 💾
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
+
       - name: Install Dependencies And Build 🔧
-        run: pnpm install --frozen-lockfile && pnpm build
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+        env:
+          REACT_APP_KAKAO_APP_KEY: ${{ secrets.REACT_APP_KAKAO_APP_KEY }}
+
       - name: Deploy with gh-pages 📦
         run: |
           git config --global user.email "wry5533@gmail.com"
