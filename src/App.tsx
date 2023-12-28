@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import FullScreenMessage from './components/common/FullScreenMessage';
 import Calender from './components/sections/Calender';
+import Contact from './components/sections/Contact';
 import Heading from './components/sections/Heading';
 import ImageGallery from './components/sections/ImageGallery';
 import Intro from './components/sections/Intro';
@@ -65,6 +66,7 @@ export default function App() {
 			<ImageGallery images={galleryImages} />
 			<Calender date={date} />
 			<Map location={location} />
+			<Contact bride={bride} groom={groom} />
 		</div>
 	);
 }

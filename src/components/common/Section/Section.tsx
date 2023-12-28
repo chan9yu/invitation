@@ -5,10 +5,10 @@ import styles from './Section.module.scss';
 
 const cx = classNames.bind(styles);
 
-type SectionProps = PropsWithChildren & {
+type SectionProps = PropsWithChildren<{
 	className?: string;
 	title?: ReactNode;
-};
+}>;
 
 export default function Section({ children, className, title }: SectionProps) {
 	return (

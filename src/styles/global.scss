@@ -13,3 +13,23 @@
 body {
 	font-family: 'NanumGeumEunBoHwa';
 }
+
+a {
+	color: var(--black);
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	appearance: none;
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+}

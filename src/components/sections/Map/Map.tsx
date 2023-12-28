@@ -4,7 +4,7 @@ import { Map as KaKaoMap, MapMarker, useKakaoLoader } from 'react-kakao-maps-sdk
 import type { Location } from '../../../models/wedding';
 import FullScreenMessage from '../../common/FullScreenMessage';
 import Section from '../../common/Section';
-import WayToCome from '../../common/WayToCome';
+import WayToCome from '../WayToCome';
 import styles from './Map.module.scss';
 
 const cx = classNames.bind(styles);
