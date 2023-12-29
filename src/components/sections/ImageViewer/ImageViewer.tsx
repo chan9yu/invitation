@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { useCallback, useEffect } from 'react';
 
 import CustomSwiper from '../../common/CustomSwiper';
 import Dimmed from '../../common/Dimmed';
@@ -15,6 +16,20 @@ type ImageViewerProps = {
 };
 
 export default function ImageViewer({ images, onClose, open, selectedIdx }: ImageViewerProps) {
+	const hadnleKeydown = useCallback(
+		(e: KeyboardEvent) => {
+			if (e.key !== 'Escape') return;
+			onClose();
+		},
+		[onClose]
+	);
+
+	useEffect(() => {
+		window.addEventListener('keydown', hadnleKeydown);
+
+		return () => window.removeEventListener('keydown', hadnleKeydown);
+	}, [hadnleKeydown]);
+
 	if (!open) {
 		return null;
 	}

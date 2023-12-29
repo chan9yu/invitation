@@ -9,11 +9,16 @@
 		width: 100%;
 		position: relative;
 		cursor: pointer;
+		transition: filter 100ms linear;
 
 		&::after {
 			content: '';
 			display: block;
 			padding-bottom: 100%;
+		}
+
+		&:hover {
+			filter: brightness(80%);
 		}
 
 		img {

@@ -1,3 +1,4 @@
+import AppLayout from './components/layout/AppLayout';
 import Calender from './components/sections/Calender';
 import Contact from './components/sections/Contact';
 import Heading from './components/sections/Heading';
@@ -23,7 +24,7 @@ export default function App() {
 	} = data as Wedding;
 
 	return (
-		<>
+		<AppLayout>
 			<Heading date={date} />
 			<Video />
 			<Intro
@@ -39,6 +40,6 @@ export default function App() {
 			<Map location={location} />
 			<Contact bride={bride} groom={groom} />
 			<Share brideName={bride.name} date={date} groomName={groom.name} />
-		</>
+		</AppLayout>
 	);
 }
