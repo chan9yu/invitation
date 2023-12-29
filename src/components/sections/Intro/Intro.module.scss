@@ -23,7 +23,7 @@
 
 .icon {
 	&--heart {
-		fill: var(--red);
+		fill: var(--color-red);
 		width: 16px;
 		height: 16px;
 		margin: 0 6px;
@@ -39,6 +39,6 @@
 		width: 24px;
 		height: 24px;
 		margin-bottom: 6px;
-		fill: var(--red);
+		fill: var(--color-red);
 	}
 }

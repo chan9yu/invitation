@@ -16,7 +16,7 @@
 
 .rdp-day_selected,
 .rdp-day_selected:hover {
-	background-color: var(--red);
+	background-color: var(--color-red);
 	font-weight: bold;
 	color: #fff;
 }

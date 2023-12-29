@@ -15,7 +15,7 @@ export default function ContactInfo({ account, name, phoneNumber }: ContactInfoP
 				<span>{`${account.bankName} | ${account.accountNumber}`}</span>
 				<span>{name}</span>
 			</div>
-			<ul className={cx('wrapper__buttons')}>
+			<ul>
 				<li>
 					<a href={`tel: ${phoneNumber}`} className={cx('button')}>
 						전화

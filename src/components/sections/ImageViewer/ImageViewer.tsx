@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 
 import CustomSwiper from '../../common/CustomSwiper';
+import Dimmed from '../../common/Dimmed';
 import CloseIcon from '../../icons/CloseIcon';
 import styles from './ImageViewer.module.scss';
 
@@ -19,9 +20,9 @@ export default function ImageViewer({ images, onClose, open, selectedIdx }: Imag
 	}
 
 	return (
-		<div className={cx('dimmed')}>
+		<Dimmed>
 			<CloseIcon className={cx('icon--close')} color="#fff" onClick={onClose} />
 			<CustomSwiper images={images} spaceBetween={20} slidesPerView={1} loop initialSlide={selectedIdx} />
-		</div>
+		</Dimmed>
 	);
 }
