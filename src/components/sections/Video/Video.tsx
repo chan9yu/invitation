@@ -7,7 +7,7 @@ import styles from './Video.module.scss';
 const cx = classNames.bind(styles);
 
 export default function Video() {
-	const poster = generateAssetURL('video', 'poster', '.jpg');
+	const poster = generateAssetURL('images', 'poster', '.jpg');
 	const webmSrc = generateAssetURL('video', 'main', '.webm');
 	const mp4Src = generateAssetURL('video', 'main', '.mp4');
 
