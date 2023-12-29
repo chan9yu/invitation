@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-	&--persons {
+	&__persons {
 		font-size: 22px;
 		display: flex;
 		justify-content: center;
@@ -14,7 +14,7 @@
 		margin: 42px 0 8px;
 	}
 
-	&--location {
+	&__location {
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 40px;
@@ -22,23 +22,21 @@
 }
 
 .icon {
-	&--heart {
+	&__heart {
 		fill: var(--color-red);
 		width: 16px;
 		height: 16px;
 		margin: 0 6px;
 	}
+
+	&__flower {
+		fill: var(--color-red);
+		width: 24px;
+		height: 24px;
+		margin-bottom: 6px;
+	}
 }
 
 .text {
 	white-space: pre-line;
-}
-
-.icon {
-	&--flower {
-		width: 24px;
-		height: 24px;
-		margin-bottom: 6px;
-		fill: var(--color-red);
-	}
 }

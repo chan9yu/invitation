@@ -13,7 +13,7 @@ type InvitationProps = {
 export default function Invitation({ message }: InvitationProps) {
 	return (
 		<Section className={cx('container')}>
-			<LetterIcon className={cx('icon--letter')} />
+			<LetterIcon className={cx('icon__letter')} />
 			<p className={cx('text')}>{message}</p>
 		</Section>
 	);

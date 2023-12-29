@@ -13,7 +13,7 @@ type WayToComeProps = {
 export default function WayToCome({ label, list }: WayToComeProps) {
 	return (
 		<div className={cx('wrapper')}>
-			<div className={cx('text--label')}>{label}</div>
+			<div className={cx('text')}>{label}</div>
 			<ul>
 				{list.map((item, idx) => (
 					<li key={idx}>{item}</li>

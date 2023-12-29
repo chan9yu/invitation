@@ -22,13 +22,13 @@ function Calender({ date }: CalenderProps) {
 	return (
 		<Section
 			title={
-				<div className={cx('wrapper--header')}>
-					<span className={cx('text--date')}>{weddingDate}</span>
-					<span className={cx('text--time')}>{weddingDate2}</span>
+				<div className={cx('wrapper__header')}>
+					<span className={cx('text__date')}>{weddingDate}</span>
+					<span className={cx('text__time')}>{weddingDate2}</span>
 				</div>
 			}
 		>
-			<div className={cx('wrapper--day-picker')}>
+			<div className={cx('wrapper__day-picker')}>
 				<CustomDayPicker
 					locale={ko}
 					month={parsedDate}

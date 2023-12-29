@@ -5,7 +5,6 @@ import Section from '../../common/Section';
 import styles from './Heading.module.scss';
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] as const;
-
 const cx = classNames.bind(styles);
 
 type HeadingProps = {
@@ -20,8 +19,8 @@ export default function Heading({ date }: HeadingProps) {
 
 	return (
 		<Section className={cx('container')}>
-			<div className={cx('text--date')}>{weddingDate}</div>
-			<div className={cx('text--day')}>{weddingDays}</div>
+			<div className={cx('text__date')}>{weddingDate}</div>
+			<div className={cx('text__day')}>{weddingDays}</div>
 		</Section>
 	);
 }

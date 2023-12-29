@@ -21,7 +21,7 @@ export default function ImageViewer({ images, onClose, open, selectedIdx }: Imag
 
 	return (
 		<Dimmed>
-			<CloseIcon className={cx('icon--close')} color="#fff" onClick={onClose} />
+			<CloseIcon className={cx('icon__close')} color="#fff" onClick={onClose} />
 			<CustomSwiper images={images} spaceBetween={20} slidesPerView={1} loop initialSlide={selectedIdx} />
 		</Dimmed>
 	);

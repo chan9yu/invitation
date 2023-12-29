@@ -34,18 +34,18 @@ export default function Map({ location }: MapProps) {
 	return (
 		<Section
 			title={
-				<div className={cx('wrapper--header')}>
-					<span className={cx('text--title')}>오시는길</span>
-					<span className={cx('text--subtitle')}>{location.name}</span>
-					<span className={cx('text--subtitle')}>{location.address}</span>
+				<div className={cx('wrapper__header')}>
+					<span className={cx('text__title')}>오시는길</span>
+					<span className={cx('text__subtitle')}>{location.name}</span>
+					<span className={cx('text__subtitle')}>{location.address}</span>
 				</div>
 			}
 		>
-			<div className={cx('wrapper--map')}>
+			<div className={cx('wrapper__map')}>
 				<KaKaoMap className={cx('map')} center={position} level={3}>
 					<MapMarker position={position} />
 				</KaKaoMap>
-				<a className={cx('btn--find-way')} href={location.link} target="_blank" rel="noreferrer">
+				<a className={cx('button')} href={location.link} target="_blank" rel="noreferrer">
 					길찾기
 				</a>
 			</div>
