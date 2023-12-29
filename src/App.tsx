@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react';
-
-import FullScreenMessage from './components/common/FullScreenMessage';
 import Calender from './components/sections/Calender';
 import Contact from './components/sections/Contact';
 import Heading from './components/sections/Heading';
@@ -10,35 +7,11 @@ import Invitation from './components/sections/Invitation';
 import Map from './components/sections/Map';
 import Share from './components/sections/Share';
 import Video from './components/sections/Video';
+import useWedding from './hooks/useWedding';
 import type { Wedding } from './models/wedding';
 
-const dataUrl = `${window.location.origin}/wedding-invitation_app/data/wedding.json`;
-
 export default function App() {
-	const [loading, setLoading] = useState(false);
-	const [error, setError] = useState(false);
-	const [wedding, setWedding] = useState<Wedding | null>(null);
-
-	useEffect(() => {
-		setLoading(true);
-		fetch(dataUrl)
-			.then(res => res.json())
-			.then(res => setWedding(res))
-			.catch(() => setError(true))
-			.finally(() => setLoading(false));
-	}, []);
-
-	if (loading) {
-		return <FullScreenMessage type="loading" />;
-	}
-
-	if (error) {
-		return <FullScreenMessage type="error" />;
-	}
-
-	if (!wedding) {
-		return null;
-	}
+	const { data } = useWedding();
 
 	const {
 		bride, //
@@ -47,10 +20,10 @@ export default function App() {
 		groom,
 		location,
 		message
-	} = wedding;
+	} = data as Wedding;
 
 	return (
-		<div>
+		<>
 			<Heading date={date} />
 			<Video />
 			<Intro
@@ -66,6 +39,6 @@ export default function App() {
 			<Map location={location} />
 			<Contact bride={bride} groom={groom} />
 			<Share brideName={bride.name} date={date} groomName={groom.name} />
-		</div>
+		</>
 	);
 }
