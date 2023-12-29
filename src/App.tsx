@@ -8,6 +8,7 @@ import ImageGallery from './components/sections/ImageGallery';
 import Intro from './components/sections/Intro';
 import Invitation from './components/sections/Invitation';
 import Map from './components/sections/Map';
+import Share from './components/sections/Share';
 import Video from './components/sections/Video';
 import type { Wedding } from './models/wedding';
 
@@ -65,6 +66,7 @@ export default function App() {
 			<Calender date={date} />
 			<Map location={location} />
 			<Contact bride={bride} groom={groom} />
+			<Share brideName={bride.name} date={date} groomName={groom.name} />
 		</div>
 	);
 }

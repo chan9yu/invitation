@@ -75,7 +75,6 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"gh-pages": "^6.1.1",
 		"husky": "^8.0.3",
-		"kakao.maps.d.ts": "^0.1.39",
 		"lint-staged": "^15.1.0",
 		"prettier": "^3.1.0",
 		"sass": "^1.69.5",
