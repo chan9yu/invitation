@@ -1,13 +1,13 @@
-import { useQuery } from 'react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import { getWedding } from '../api';
 
 const useWedding = () => {
-	const result = useQuery(['wedding'], getWedding, {
-		suspense: true,
-		useErrorBoundary: true
+	const { data, error, isError } = useSuspenseQuery({
+		queryKey: ['wedding'],
+		queryFn: getWedding
 	});
 
-	return { ...result };
+	return { data, error, isError };
 };
 
 export default useWedding;
