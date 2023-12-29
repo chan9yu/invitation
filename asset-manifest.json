@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/wedding-invitation_app/static/css/main.6e23c648.css",
-    "main.js": "/wedding-invitation_app/static/js/main.8a138d0f.js",
+    "main.css": "/wedding-invitation_app/static/css/main.ff2e3943.css",
+    "main.js": "/wedding-invitation_app/static/js/main.5aad28a8.js",
     "static/media/NanumGeumEunBoHwa.ttf": "/wedding-invitation_app/static/media/NanumGeumEunBoHwa.c0218d741bd238e567f8.ttf",
     "static/media/NanumGeumEunBoHwa.woff": "/wedding-invitation_app/static/media/NanumGeumEunBoHwa.ebc72913fb5ddc4122ca.woff",
     "static/media/NanumGeumEunBoHwa.woff2": "/wedding-invitation_app/static/media/NanumGeumEunBoHwa.604adb60828562a2cb14.woff2",
     "index.html": "/wedding-invitation_app/index.html",
-    "main.6e23c648.css.map": "/wedding-invitation_app/static/css/main.6e23c648.css.map",
-    "main.8a138d0f.js.map": "/wedding-invitation_app/static/js/main.8a138d0f.js.map"
+    "main.ff2e3943.css.map": "/wedding-invitation_app/static/css/main.ff2e3943.css.map",
+    "main.5aad28a8.js.map": "/wedding-invitation_app/static/js/main.5aad28a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e23c648.css",
-    "static/js/main.8a138d0f.js"
+    "static/css/main.ff2e3943.css",
+    "static/js/main.5aad28a8.js"
   ]
 }
