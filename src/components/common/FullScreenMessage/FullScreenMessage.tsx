@@ -14,10 +14,10 @@ export default function FullScreenMessage({ type }: FullScreenMessageProps) {
 	return (
 		<div className={cx('container')}>
 			{type === 'loading' ? (
-				<HeartIcon className={cx('icon--heart')} />
+				<HeartIcon className={cx(['icon', 'icon__heart'])} />
 			) : (
 				<>
-					<ErrorIcon className={cx('icon--error')} />
+					<ErrorIcon className={cx(['icon', 'icon__error'])} />
 					에러가 발생했어요 잠시 후 다시 시도해주세요.
 				</>
 			)}

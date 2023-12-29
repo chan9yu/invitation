@@ -37,16 +37,22 @@
 
 해당 앱을 실행시키기 위한 필수 조건 입니다.
 
+0. .env.example 기준으로 .env.local 파일 생성
+
+```shell
+REACT_APP_KAKAO_APP_KEY=YOUR_KAKAO_APP_KEY
+```
+
 1. pnpm install
 
-```
+```shell
 # pnpm 설치
 npm -g install pnpm
 ```
 
 2. node setup
 
-```
+```shell
 # .nvmrc 기준 node version 설치
 nvm use
 ```

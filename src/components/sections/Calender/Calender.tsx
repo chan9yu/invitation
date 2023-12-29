@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import { format, parseISO } from 'date-fns';
 import { ko } from 'date-fns/locale';
+import { memo } from 'react';
 
 import CustomDayPicker from '../../common/CustomDayPicker';
 import Section from '../../common/Section';
@@ -12,7 +13,7 @@ type CalenderProps = {
 	date: string;
 };
 
-export default function Calender({ date }: CalenderProps) {
+function Calender({ date }: CalenderProps) {
 	const parsedDate = parseISO(date);
 
 	const weddingDate = format(parsedDate, 'yyyy.MM.dd');
@@ -21,13 +22,13 @@ export default function Calender({ date }: CalenderProps) {
 	return (
 		<Section
 			title={
-				<div className={cx('wrapper--header')}>
-					<span className={cx('text--date')}>{weddingDate}</span>
-					<span className={cx('text--time')}>{weddingDate2}</span>
+				<div className={cx('wrapper__header')}>
+					<span className={cx('text__date')}>{weddingDate}</span>
+					<span className={cx('text__time')}>{weddingDate2}</span>
 				</div>
 			}
 		>
-			<div className={cx('wrapper--day-picker')}>
+			<div className={cx('wrapper__day-picker')}>
 				<CustomDayPicker
 					locale={ko}
 					month={parsedDate}
@@ -38,3 +39,5 @@ export default function Calender({ date }: CalenderProps) {
 		</Section>
 	);
 }
+
+export default memo(Calender);

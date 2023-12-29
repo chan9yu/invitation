@@ -23,16 +23,16 @@ export default function Intro({ brideName, date, groomName, locationName, messag
 
 	return (
 		<Section className={cx('container')}>
-			<div className={cx('wrapper--persons')}>
+			<div className={cx('wrapper__persons')}>
 				<span>{groomName}</span>
-				<HeartIcon className={cx('icon--heart')} />
+				<HeartIcon className={cx('icon__heart')} />
 				<span>{brideName}</span>
 			</div>
-			<div className={cx('wrapper--location')}>
+			<div className={cx('wrapper__location')}>
 				<span>{weddingDate}</span>
 				<span>{locationName}</span>
 			</div>
-			<FlowerIcon className={cx('icon--flower')} />
+			<FlowerIcon className={cx('icon__flower')} />
 			<div className={cx('text')}>{message}</div>
 		</Section>
 	);

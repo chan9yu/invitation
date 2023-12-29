@@ -18,9 +18,7 @@
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
 		"noImplicitReturns": true,
-		"types": [
-			"kakao.maps.d.ts"
-		]
+		"types": ["kakao.maps.d.ts"]
 	},
 	"include": ["src"],
 	"exclude": ["node_modules"]

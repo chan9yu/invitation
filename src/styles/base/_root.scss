@@ -1,0 +1,11 @@
+:root {
+	// color
+	--color-red: #{$color-red};
+	--color-black: #{$color-black};
+	--color-brown: #{$color-brown};
+	--color-beige: #{$color-beige};
+
+	// zIndex
+	--z-index-dimmed: #{$z-index-dimmed};
+	--z-index-modal: #{$z-index-modal};
+}

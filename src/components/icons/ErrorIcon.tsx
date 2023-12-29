@@ -1,6 +1,6 @@
-import type { IconBaseProps } from 'react-icons';
-import { BiSolidMessageSquareError } from 'react-icons/bi';
+import type { IconBaseProps } from '@react-icons/all-files';
+import { MdErrorOutline } from '@react-icons/all-files/md/MdErrorOutline';
 
 export default function ErrorIcon(props: IconBaseProps) {
-	return <BiSolidMessageSquareError {...props} />;
+	return <MdErrorOutline {...props} />;
 }

@@ -1,20 +1,20 @@
 .wrapper {
-	&--header {
+	&__header {
 		display: flex;
 		flex-direction: column;
 	}
 
-	&--map {
+	&__map {
 		position: relative;
 	}
 }
 
 .text {
-	&--title {
+	&__title {
 		margin-bottom: 16px;
 	}
 
-	&--subtitle {
+	&__subtitle {
 		font-weight: 400;
 		font-size: 15px;
 	}
@@ -25,18 +25,16 @@
 	height: 250px;
 }
 
-.btn {
-	&--find-way {
-		position: absolute;
-		bottom: 24px;
-		left: 50%;
-		transform: translateX(-50%);
-		border: 1px solid var(--black);
-		padding: 8px 32px;
-		z-index: 2;
-		background-color: #fff;
-		color: var(--black);
-		text-decoration: none;
-		border-radius: 32px;
-	}
+.button {
+	position: absolute;
+	bottom: 24px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 1px solid var(--color-black);
+	padding: 8px 32px;
+	z-index: 2;
+	background-color: #fff;
+	color: var(--color-black);
+	text-decoration: none;
+	border-radius: 32px;
 }

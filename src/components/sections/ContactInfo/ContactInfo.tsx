@@ -9,31 +9,30 @@ const cx = classNames.bind(styles);
 type ContactInfoProps = Person & {};
 
 export default function ContactInfo({ account, name, phoneNumber }: ContactInfoProps) {
+	const handleCopy = () => {
+		alert('복사가 완료되었습니다.');
+	};
+
 	return (
 		<div className={cx('container')}>
-			<div className={cx('wrapper__info')}>
+			<div className={cx('wrapper')}>
 				<span>{`${account.bankName} | ${account.accountNumber}`}</span>
 				<span>{name}</span>
 			</div>
-			<ul className={cx('wrapper__buttons')}>
+			<ul>
 				<li>
-					<a href={`tel: ${phoneNumber}`} className={cx('button')}>
+					<a className={cx('button')} href={`tel: ${phoneNumber}`}>
 						전화
 					</a>
 				</li>
 				<li>
-					<CopyToClipboard
-						text={`${account.bankName} ${account.accountNumber}`}
-						onCopy={() => {
-							alert('복사가 완료되었습니다.');
-						}}
-					>
+					<CopyToClipboard text={`${account.bankName} ${account.accountNumber}`} onCopy={handleCopy}>
 						<button className={cx('button')}>복사</button>
 					</CopyToClipboard>
 				</li>
 				{account.kakaopayLink && (
 					<li>
-						<a href={account.kakaopayLink} target="_blank" rel="noreferrer" className={cx('button')}>
+						<a className={cx('button')} href={account.kakaopayLink} target="_blank" rel="noreferrer">
 							송금
 						</a>
 					</li>

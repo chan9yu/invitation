@@ -1,6 +1,8 @@
 import classNames from 'classnames/bind';
+import { useCallback, useEffect } from 'react';
 
 import CustomSwiper from '../../common/CustomSwiper';
+import Dimmed from '../../common/Dimmed';
 import CloseIcon from '../../icons/CloseIcon';
 import styles from './ImageViewer.module.scss';
 
@@ -14,14 +16,28 @@ type ImageViewerProps = {
 };
 
 export default function ImageViewer({ images, onClose, open, selectedIdx }: ImageViewerProps) {
+	const hadnleKeydown = useCallback(
+		(e: KeyboardEvent) => {
+			if (e.key !== 'Escape') return;
+			onClose();
+		},
+		[onClose]
+	);
+
+	useEffect(() => {
+		window.addEventListener('keydown', hadnleKeydown);
+
+		return () => window.removeEventListener('keydown', hadnleKeydown);
+	}, [hadnleKeydown]);
+
 	if (!open) {
 		return null;
 	}
 
 	return (
-		<div className={cx('dimmed')}>
-			<CloseIcon className={cx('icon--close')} color="#fff" onClick={onClose} />
+		<Dimmed>
+			<CloseIcon className={cx('icon__close')} color="#fff" onClick={onClose} />
 			<CustomSwiper images={images} spaceBetween={20} slidesPerView={1} loop initialSlide={selectedIdx} />
-		</div>
+		</Dimmed>
 	);
 }

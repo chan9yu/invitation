@@ -1,12 +1,7 @@
-// import classNames from 'classnames/bind';
-
 import type { Wedding } from '../../../models/wedding';
 import Accordion from '../../common/Accordion';
 import Section from '../../common/Section';
 import ContactInfo from '../ContactInfo';
-// import styles from './Contact.module.scss';
-
-// const cx = classNames.bind(styles);
 
 type ContactProps = {
 	bride: Wedding['bride'];
