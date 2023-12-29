@@ -1,6 +1,6 @@
-import type { IconBaseProps } from 'react-icons';
-import { LuMail } from 'react-icons/lu';
+import type { IconBaseProps } from '@react-icons/all-files';
+import { GiLoveLetter } from '@react-icons/all-files/gi/GiLoveLetter';
 
 export default function LetterIcon(props: IconBaseProps) {
-	return <LuMail {...props} />;
+	return <GiLoveLetter {...props} />;
 }
