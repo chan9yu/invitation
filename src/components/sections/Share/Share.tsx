@@ -4,13 +4,14 @@ import { ko } from 'date-fns/locale';
 import { useEffect } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-import { generateAssetURL } from '../../../utils';
+import { BASE_URL } from '../../../api';
 import Section from '../../common/Section';
 import ClipboardIcon from '../../icons/ClipboardIcon';
 import KakaoIcon from '../../icons/KakaoIcon';
 import styles from './Share.module.scss';
 
 const cx = classNames.bind(styles);
+const IMAGE_URL = 'https://chan9yu.github.io/wedding-invitation_app/assets/images/share_img.png' as const;
 
 type ShareProps = {
 	brideName: string;
@@ -39,22 +40,20 @@ export default function Share({ brideName, date, groomName }: ShareProps) {
 			content: {
 				title: `${groomName} ♥️ ${brideName} 결혼합니다.`,
 				description: `${format(parseISO(date), 'M월 d일 eeee aaa h시', { locale: ko })}`,
-				imageUrl: generateAssetURL('images', 'share_img', '.png'),
-				link: {
-					mobileWebUrl: window.location.origin,
-					webUrl: window.location.origin
-				}
+				imageUrl: IMAGE_URL,
+				link: { mobileWebUrl: BASE_URL, webUrl: BASE_URL }
 			},
 			buttons: [
 				{
 					title: '청접장 보기',
-					link: {
-						mobileWebUrl: window.location.origin,
-						webUrl: window.location.origin
-					}
+					link: { mobileWebUrl: BASE_URL, webUrl: BASE_URL }
 				}
 			]
 		});
+	};
+
+	const handleCopy = () => {
+		alert('복사가 완료되었습니다.');
 	};
 
 	return (
@@ -63,12 +62,7 @@ export default function Share({ brideName, date, groomName }: ShareProps) {
 				<button onClick={handleShareKakao}>
 					<KakaoIcon className={cx('icon')} />
 				</button>
-				<CopyToClipboard
-					text={window.location.origin}
-					onCopy={() => {
-						alert('복사가 완료되었습니다.');
-					}}
-				>
+				<CopyToClipboard text={BASE_URL} onCopy={handleCopy}>
 					<button>
 						<ClipboardIcon className={cx('icon')} />
 					</button>

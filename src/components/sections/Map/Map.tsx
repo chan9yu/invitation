@@ -1,8 +1,7 @@
 import classNames from 'classnames/bind';
-import { Map as KaKaoMap, MapMarker, useKakaoLoader } from 'react-kakao-maps-sdk';
+import { useEffect, useRef } from 'react';
 
 import type { Location } from '../../../models/wedding';
-import FullScreenMessage from '../../common/FullScreenMessage';
 import Section from '../../common/Section';
 import WayToCome from '../WayToCome';
 import styles from './Map.module.scss';
@@ -14,22 +13,25 @@ type MapProps = {
 };
 
 export default function Map({ location }: MapProps) {
-	const [loading, error] = useKakaoLoader({
-		appkey: process.env.REACT_APP_KAKAO_APP_KEY
-	});
+	const mapContainer = useRef<HTMLDivElement>(null);
 
-	if (loading) {
-		return <FullScreenMessage type="loading" />;
-	}
+	useEffect(() => {
+		const script = document.createElement('script');
+		script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.REACT_APP_KAKAO_APP_KEY}&autoload=false`;
+		script.async = true;
 
-	if (error) {
-		return <FullScreenMessage type="error" />;
-	}
+		document.head.appendChild(script);
 
-	const position = {
-		lat: location.lat,
-		lng: location.lng
-	};
+		script.onload = () => {
+			window.kakao.maps.load(() => {
+				const position = new window.kakao.maps.LatLng(location.lat, location.lng);
+				const options = { center: position, level: 3 };
+				const map = new window.kakao.maps.Map(mapContainer.current as HTMLDivElement, options);
+				const marker = new window.kakao.maps.Marker({ position });
+				marker.setMap(map);
+			});
+		};
+	}, [location.lat, location.lng]);
 
 	return (
 		<Section
@@ -42,9 +44,7 @@ export default function Map({ location }: MapProps) {
 			}
 		>
 			<div className={cx('wrapper__map')}>
-				<KaKaoMap className={cx('map')} center={position} level={3}>
-					<MapMarker position={position} />
-				</KaKaoMap>
+				<div ref={mapContainer} className={cx('map')} />
 				<a className={cx('button')} href={location.link} target="_blank" rel="noreferrer">
 					길찾기
 				</a>
