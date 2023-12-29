@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Section from '../../common/Section';
 import ImageViewer from '../ImageViewer';
 import styles from './ImageGallery.module.scss';
+import { generateAssetURL } from '../../../utils';
 
 const cx = classNames.bind(styles);
 
@@ -30,7 +31,10 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 				<ul className={cx('image__group')}>
 					{images.map((image, idx) => (
 						<li key={idx} className={cx('image__item')} onClick={handleSelectedImage(idx)}>
-							<img src={image} alt="사진첩 이미지" />
+							<picture>
+								<source srcSet={generateAssetURL('images', image, '.webp')} type="image/webp" />
+								<img src={generateAssetURL('images', image, '.png')} alt="사진첩 이미지" />
+							</picture>
 						</li>
 					))}
 				</ul>

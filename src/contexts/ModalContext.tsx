@@ -1,4 +1,4 @@
-import { ComponentProps, PropsWithChildren, createContext, useContext, useState } from 'react';
+import { ComponentProps, PropsWithChildren, createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import Modal from '../components/common/Modal';
@@ -24,16 +24,18 @@ const initialModalState: ModalProps = {
 export default function ModalProvider({ children }: PropsWithChildren) {
 	const [modalState, setModalState] = useState<ModalProps>(initialModalState);
 
-	const onOpen = (options: ModalOptions) => {
+	const onOpen = useCallback((options: ModalOptions) => {
 		setModalState({ ...options, isOpen: true });
-	};
+	}, []);
 
-	const onClose = () => {
+	const onClose = useCallback(() => {
 		setModalState(initialModalState);
-	};
+	}, []);
+
+	const value = useMemo(() => ({ onClose, onOpen }), [onClose, onOpen]);
 
 	return (
-		<ModalContext.Provider value={{ onOpen, onClose }}>
+		<ModalContext.Provider value={value}>
 			{children}
 			{createPortal(<Modal {...modalState} />, document.body)}
 		</ModalContext.Provider>

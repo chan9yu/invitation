@@ -4,12 +4,12 @@ import { ko } from 'date-fns/locale';
 import { useEffect } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
+import { generateAssetURL } from '../../../utils';
 import Section from '../../common/Section';
 import ClipboardIcon from '../../icons/ClipboardIcon';
 import KakaoIcon from '../../icons/KakaoIcon';
 import styles from './Share.module.scss';
 
-const BASE_URL = 'https://chan9yu.github.io/wedding-invitation_app/assets/';
 const cx = classNames.bind(styles);
 
 type ShareProps = {
@@ -39,7 +39,7 @@ export default function Share({ brideName, date, groomName }: ShareProps) {
 			content: {
 				title: `${groomName} ♥️ ${brideName} 결혼합니다.`,
 				description: `${format(parseISO(date), 'M월 d일 eeee aaa h시', { locale: ko })}`,
-				imageUrl: `${BASE_URL}/images/share_img.png`,
+				imageUrl: generateAssetURL('images', 'share_img', '.png'),
 				link: {
 					mobileWebUrl: window.location.origin,
 					webUrl: window.location.origin

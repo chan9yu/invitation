@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import { format, parseISO } from 'date-fns';
 import { ko } from 'date-fns/locale';
+import { memo } from 'react';
 
 import CustomDayPicker from '../../common/CustomDayPicker';
 import Section from '../../common/Section';
@@ -12,7 +13,7 @@ type CalenderProps = {
 	date: string;
 };
 
-export default function Calender({ date }: CalenderProps) {
+function Calender({ date }: CalenderProps) {
 	const parsedDate = parseISO(date);
 
 	const weddingDate = format(parsedDate, 'yyyy.MM.dd');
@@ -38,3 +39,5 @@ export default function Calender({ date }: CalenderProps) {
 		</Section>
 	);
 }
+
+export default memo(Calender);

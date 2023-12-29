@@ -43,7 +43,7 @@ export default function AttendCountModal({ wedding }: AttendCountModalProps) {
 				}
 			}
 		});
-	}, []);
+	}, [onClose, onOpen, wedding.attendCount]);
 
 	return null;
 }

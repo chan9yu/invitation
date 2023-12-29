@@ -12,8 +12,7 @@ import Share from './components/sections/Share';
 import Video from './components/sections/Video';
 import type { Wedding } from './models/wedding';
 
-const isDev = process.env.NODE_ENV === 'development';
-const baseUrl = isDev ? 'http://localhost:3050' : 'https://chan9yu.github.io';
+const dataUrl = `${window.location.origin}/wedding-invitation_app/data/wedding.json`;
 
 export default function App() {
 	const [loading, setLoading] = useState(false);
@@ -22,7 +21,7 @@ export default function App() {
 
 	useEffect(() => {
 		setLoading(true);
-		fetch(`${baseUrl}/wedding-invitation_app/data/wedding.json`)
+		fetch(dataUrl)
 			.then(res => res.json())
 			.then(res => setWedding(res))
 			.catch(() => setError(true))
